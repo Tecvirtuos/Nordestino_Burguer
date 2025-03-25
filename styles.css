@@ -43,3 +43,40 @@
     align-items: center;            /* Centraliza HORIZONTALMENTE (no modo column) */
     flex: 1 1 0%;                  /* Mantém a flexibilidade */
 }
+
+/* Estilo da regiao */
+.regiao {
+    color: white;
+    font-size: medium;
+}
+
+/* Estilo do funcionamento */
+.funcionamento {
+    background-color: green;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 4px;
+    margin-top: 20px;
+    color: white;
+    font-size: medium;
+}
+
+/* Estilo do título do menu */
+.titlemenu {
+    font-size: 24px;          /* Tamanho padrão (mobile) */
+    line-height: 32px;       /* Line-height padrão */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 36px;
+    margin-bottom: 24px;
+}
+
+/* Estilo para telas médias/grandes (md: 768px+) */
+@media (min-width: 768px) {
+    .titlemenu {
+        font-size: 1.875rem;  /* Equivalente a text-3xl (30px) */
+        line-height: 2.25rem; /* Line-height do Tailwind (36px) */
+    }
+}
