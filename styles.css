@@ -52,7 +52,7 @@
 
 /* Estilo do funcionamento */
 .funcionamento {
-    background-color: green;
+    background-color: #a53f20;
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 4px;
@@ -79,4 +79,89 @@
         font-size: 1.875rem;  /* Equivalente a text-3xl (30px) */
         line-height: 2.25rem; /* Line-height do Tailwind (36px) */
     }
+}
+
+/* Estilo para cart imagem */
+.cart-img {
+    width: 112px;
+    height: 112px;
+    border-radius: 6px;
+    transition: transform 300ms ease; /* Transição suave */
+}
+
+.cart-img:hover {
+    transform: scale(1.1) rotate(-2deg); /* Aplica apenas no hover */
+}
+
+/* Estilo para cart paragrafo */
+.cart-paragraf{
+font-weight: bold;
+}
+
+/* Estilo para cart descrição */
+.cart-descripition{
+font-size: 14px;
+line-height: 20px;
+}
+
+/* Estilo para cart descrição */
+/* Estilo do botão cart */
+.cart-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Font Awesome 6 Free', sans-serif;
+    font-weight: 900;
+    font-size: 1.125rem;
+    color: white;
+    background-color: #000000; /* Vermelho-terroso do sertão */
+    border: 2px solid #000000;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+  /* Ícone do carrinho */
+.cart-button::before {
+    content: "\f217"; /* Ícone cart-plus */
+}
+
+  /* Efeitos hover */
+.cart-button:hover {
+    transform: scale(1.05);
+    background-color: #a53f20;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeitos para preço do cart */
+.cart-price{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/* Efeitos para o bloco do preço e botão do carrinho */
+.cart-price-button{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+/* Efeitos para o cart-produto */
+.cart-produt{
+    display: flex;
+    gap: 8px;
+}
+
+/* Efeitos do main cart */
+.cart-main{
+    display: grid;
+    grid-template-columns: repeat(1);
+    gap: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
 }
