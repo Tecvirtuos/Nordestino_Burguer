@@ -104,36 +104,6 @@ font-size: 14px;
 line-height: 20px;
 }
 
-/* Estilo para cart descrição */
-/* Estilo do botão cart */
-.cart-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'Font Awesome 6 Free', sans-serif;
-    font-weight: 900;
-    font-size: 1.125rem;
-    color: white;
-    background-color: #000000; /* Vermelho-terroso do sertão */
-    border: 2px solid #000000;
-    border-radius: 6px;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-  /* Ícone do carrinho */
-.cart-button::before {
-    content: "\f217"; /* Ícone cart-plus */
-}
-
-  /* Efeitos hover */
-.cart-button:hover {
-    transform: scale(1.05);
-    background-color: #a53f20;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 /* Efeitos para preço do cart */
 .cart-price{
     font-weight: bold;
@@ -145,8 +115,7 @@ line-height: 20px;
 .cart-price-button{
     display: flex;
     align-items: center;
-    gap: 8px;
-    justify-content: space-between;
+    gap: 18px;
     margin-top: 12px;
 }
 
@@ -157,11 +126,33 @@ line-height: 20px;
 }
 
 /* Efeitos do main cart */
-.cart-main{
+.main-cart{
     display: grid;
-    grid-template-columns: repeat(1);
+    grid-template-columns: repeat(2);
     gap: 28px;
     margin-left: auto;
     margin-right: auto;
     max-width: 1280px;
+    @media (min-width: 768px) {
+        .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+}
+
+.cart-button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;           /* Transforma o botão em flex container */
+    align-items: center;     /* Centraliza conteúdo verticalmente */
+    justify-content: center; /* Centraliza conteúdo horizontalmente */
+    margin: 0 auto;          /* Centraliza o botão horizontalmente no container pai */
+}
+
+.cart-button:hover {
+    background-color: green;
 }
