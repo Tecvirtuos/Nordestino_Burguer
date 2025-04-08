@@ -1,158 +1,222 @@
-/* Classe para o logotipo circular */
-.logo {
-    width: 128px;          /* Largura de 128 pixels */
-    height: 128px;         /* Altura de 128 pixels */
-    border-radius: 50%;    /* Formato circular */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    transition: transform 200ms ease, box-shadow 200ms ease; /* Transição rápida (200ms) */
-    cursor: pointer;       /* Cursor indicando interação */
+/* ==================== */
+/* ESTILOS GERAIS */
+/* ==================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Efeito ao passar o mouse */
-.logo:hover {
-    transform: scale(1.1); /* Aumenta 10% */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
-}
-
-/* Estilos para o nome no cabeçalho */
-.nomeheader {
-    color: white;
-    font-size: 32px;     /* Tamanho da fonte */
-    line-height: 36px;   /* Espaçamento entre linhas */
-    margin-top: 16px;    /* Margem superior */
-    margin-bottom: 8px;  /* Margem inferior */
-}
-
-/* Estilos para a foto do header */
+/* ==================== */
+/* HEADER */
+/* ==================== */
 .configheader {
     width: 100%;
     height: 420px;
-    background-image: url('images/bg.png'); /* Caminho da imagem */
-    background-size: cover;          /* Cobrir toda a área */
-    background-position: center;     /* Centralizar a imagem */
-    background-repeat: no-repeat;    /* Não repetir a imagem */
+    background-image: url('images/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Estilos para a div do header */
 .configdivheader {
     width: 100%;
     height: 100%;
-    display: flex;                  /* Ativa o Flexbox */
-    flex-direction: column;         /* Alinhamento em coluna */
-    justify-content: center;        /* Centraliza VERTICALMENTE (no modo column) */
-    align-items: center;            /* Centraliza HORIZONTALMENTE (no modo column) */
-    flex: 1 1 0%;                  /* Mantém a flexibilidade */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 0%;
 }
 
-/* Estilo da regiao */
+.logo {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nomeheader {
+    color: white;
+    font-size: 32px;
+    line-height: 36px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
 .regiao {
     color: white;
     font-size: medium;
 }
 
-/* Estilo do funcionamento */
 .funcionamento {
     background-color: #a53f20;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding: 4px 16px;
     border-radius: 4px;
     margin-top: 20px;
     color: white;
     font-size: medium;
 }
 
-/* Estilo do título do menu */
+/* ==================== */
+/* TÍTULO DO MENU */
+/* ==================== */
 .titlemenu {
-    font-size: 24px;          /* Tamanho padrão (mobile) */
-    line-height: 32px;       /* Line-height padrão */
+    font-size: 24px;
+    line-height: 32px;
     font-weight: bold;
     text-align: center;
     margin-top: 36px;
     margin-bottom: 24px;
 }
 
-/* Estilo para telas médias/grandes (md: 768px+) */
 @media (min-width: 768px) {
     .titlemenu {
-        font-size: 1.875rem;  /* Equivalente a text-3xl (30px) */
-        line-height: 2.25rem; /* Line-height do Tailwind (36px) */
+        font-size: 1.875rem;
+        line-height: 2.25rem;
     }
 }
 
-/* Estilo para cart imagem */
-.cart-img {
+/* ==================== */
+/* SEÇÃO DE PRODUTOS */
+/* ==================== */
+#menu {
+    padding: 20px 0;
+}
+
+.produtos-main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 28px;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 20px;
+}
+
+/* CARD DE PRODUTO */
+.produto {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 200px;
+}
+
+.produto-img {
     width: 112px;
     height: 112px;
     border-radius: 6px;
-    transition: transform 300ms ease; /* Transição suave */
+    transition: transform 300ms ease;
+    align-self: center;
 }
 
-.cart-img:hover {
-    transform: scale(1.1) rotate(-2deg); /* Aplica apenas no hover */
+.produto-img:hover {
+    transform: scale(1.1) rotate(-2deg);
 }
 
-/* Estilo para cart paragrafo */
-.cart-paragraf{
-font-weight: bold;
-}
-
-/* Estilo para cart descrição */
-.cart-descripition{
-font-size: 14px;
-line-height: 20px;
-}
-
-/* Efeitos para preço do cart */
-.cart-price{
+.produto-paragrafo {
     font-weight: bold;
     font-size: 18px;
-    line-height: 28px;
+    margin: 8px 0;
 }
 
-/* Efeitos para o bloco do preço e botão do carrinho */
-.cart-price-button{
+.produto-descricao {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 8px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    flex-grow: 1;
+    min-height: 60px;
+}
+
+.produto-valor {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 18px;
     margin-top: 12px;
 }
 
-/* Efeitos para o cart-produto */
-.cart-produt{
-    display: flex;
-    gap: 8px;
+.produto-preco {
+    font-weight: bold;
+    font-size: 18px;
 }
 
-/* Efeitos do main cart */
-.main-cart{
-    display: grid;
-    grid-template-columns: repeat(2);
-    gap: 28px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1280px;
-    @media (min-width: 768px) {
-        .md\:grid-cols-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-    }
-}
-
-.cart-button {
+.produto-botao {
     width: 24px;
     height: 24px;
     border-radius: 50%;
     border: none;
     background: transparent;
     cursor: pointer;
-    display: flex;           /* Transforma o botão em flex container */
-    align-items: center;     /* Centraliza conteúdo verticalmente */
-    justify-content: center; /* Centraliza conteúdo horizontalmente */
-    margin: 0 auto;          /* Centraliza o botão horizontalmente no container pai */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.cart-button:hover {
+.produto-botao:hover {
     background-color: green;
+}
+
+/* ==================== */
+/* TÍTULO DAS BEBIDAS */
+/* ==================== */
+.titledrinks {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 36px;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+    .titledrinks {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+.cart-footer {
+    width: 100%;
+    background-color: #a53f20;
+    padding: 0.5rem 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart-count {
+    font-weight: bold;
+}
+
+.cart-icon {
+    font-size: 1.125rem;
 }
